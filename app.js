@@ -1,5 +1,8 @@
 const express = require("express")
+const cors = require("cors")
 const app = express()
+
+
 
 const userRouter = require("./router/userRouter")
 const classRouter = require("./router/classRouter")
@@ -9,7 +12,7 @@ console.log("🚀 ~ file: app.js:6 ~ classRouter:", classRouter)
 
 const mongoose = require("mongoose")
 
-mongoose.connect("mongodb://127.0.0.1:27017/schoolData").then(() => {
+mongoose.connect("mongodb+srv://urvish199:LKK2TNVlQoKufHUZ@school.thozwrc.mongodb.net/school").then(() => {
     console.log("db is connected !!!");
 }).catch((error) => {
     console.log(error);
